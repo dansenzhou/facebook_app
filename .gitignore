@@ -1,0 +1,23 @@
+# Framework & composer stuff
+app/bootstrap.php.cache
+app/cache/*
+!app/cache/.gitkeep
+app/logs/*
+!app/logs/.gitkeep
+build/
+vendor/
+bin/
+composer.phar
+composer.lock
+
+# IDE & OS stuff
+.idea/*
+.DS_Store
+
+# misc content
+profiler/*
+
+*.sql
+*.mysql
+
+web/bundles
