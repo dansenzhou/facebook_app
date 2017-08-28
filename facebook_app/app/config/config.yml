@@ -50,3 +50,10 @@ doctrine:
             default:
                 connection:     default
                 auto_mapping:   true
+
+stof_doctrine_extensions:
+    default_locale: en
+    orm:
+        default:
+            timestampable:  true
+            loggable:       true
