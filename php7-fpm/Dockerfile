@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y software-properties-common language-pac
 RUN sed -i -e 's/listen = \/run\/php\/php7.1-fpm.sock/listen = 0.0.0.0:9000/g' /etc/php/7.1/fpm/pool.d/www.conf \
     && sed -i -e 's/;daemonize = yes/daemonize = no/g' /etc/php/7.1/fpm/php-fpm.conf
 
-RUN apt-get install -y git
+RUN apt-get update && apt-get install -y git
 
 # xdebug
 RUN pecl install xdebug && \
