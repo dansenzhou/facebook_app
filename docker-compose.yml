@@ -19,8 +19,7 @@ services:
         expose:
             - "9000"
         volumes:
-            - ./app:/var/www/app
-            - ./logs/app:/var/www/app/logs
+            - ./facebook_app:/var/www/app
         links:
             - db
     nginx:

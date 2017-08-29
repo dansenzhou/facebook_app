@@ -1,0 +1,16 @@
+{% extends 'AppBundle::layout.html.twig' %}
+
+{% block body %}
+
+
+    <img src="{{ user.picture }}">
+    <div>
+        <strong>{{ user.firstName ~ user.lastName }}</strong>
+    </div>
+
+
+    <a href="{{ path('logout') }}" style="margin-top: 50px;">
+        Logout
+    </a>
+
+{% endblock %}
