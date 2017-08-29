@@ -11,5 +11,7 @@ services:
   app.data_manager.user:
     parent: app.data_manager.abstract
     class: %app.data_manager.user.class%
+    calls:
+      - [ setUserRepository, [ '@app.repository.user' ] ]
 
 

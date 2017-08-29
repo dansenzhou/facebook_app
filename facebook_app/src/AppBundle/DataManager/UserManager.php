@@ -33,6 +33,24 @@ class UserManager extends AbstractManager
             throw new DataManagerException("Get user by id: user not found");
         }
     }
+    /**
+     * Get user by oauth user id
+     *
+     * @author Dansen Zhou <zds8978704@gmail.com>
+     *
+     * @param $uid
+     * @return User
+     * @throws DataManagerException
+     */
+    public function getUserByOauthUid($uid)
+    {
+        $user = $this->userRepository->findOneBy(['oauthUid' => $uid]);
+        if ($user instanceof User) {
+            return $user;
+        } else {
+            throw new DataManagerException("Get user by oauth user id: user not found");
+        }
+    }
 
     /**
      * Save user into database

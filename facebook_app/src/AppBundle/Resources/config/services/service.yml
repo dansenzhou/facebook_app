@@ -1,0 +1,11 @@
+parameters:
+  app.service.facebook.class: AppBundle\Service\FacebookService
+
+services:
+  app.service.facebook:
+    class: %app.service.facebook.class%
+    arguments:
+        - 1879723548945317
+        - 5f87e860fc783190f58d7d29ec5edea9
+
+

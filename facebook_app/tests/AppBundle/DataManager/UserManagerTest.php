@@ -42,6 +42,18 @@ class UserManagerTest extends WebTestCase
         }
     }
 
+    public function testGetUserByOAuthUid()
+    {
+        $uid = $this->referenceRepository->getReference('user-1')->getOauthUid();
+        $this->assertNotNull($uid);
+        try {
+            $user = $this->userManager->getUserByOauthUid($uid);
+            $this->assertTrue($user instanceof User);
+        } catch (AppException $exception) {
+            $this->fail("Exception should not throw");
+        }
+    }
+
     public function testGetUserByIdWithException()
     {
         try {
